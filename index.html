@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Martin — Administrateur Systèmes &amp; Réseaux</title>
+<meta name="description" content="Portfolio de FEISTHAUER Tristan, Administrateur Systèmes et Réseaux : infrastructures, réseaux d'entreprise, supervision et sécurité.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo">AM<span class="logo-dot">.</span></a>
+
+    <nav class="nav" id="nav">
+      <a href="#apropos">À propos</a>
+      <a href="#competences">Compétences</a>
+      <a href="#experience">Expérience</a>
+      <a href="#projets">Projets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="status-pill" title="Statut de session">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span class="status-text">uptime <span id="uptime">00:00:00</span></span>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-text reveal">
+        <p class="eyebrow">// administrateur systèmes &amp; réseaux</p>
+        <h1>Les systèmes tournent.<br>Le réseau tient.<br><span class="accent">Vous ne le remarquez jamais</span> —<br>c'est le but.</h1>
+        <p class="hero-sub">Basé à <strong>[Ville, Pays]</strong>, je conçois, déploie et supervise des infrastructures Linux &amp; Windows fiables : serveurs, réseaux d'entreprise, sécurité périmétrique et monitoring 24/7.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Me contacter</a>
+          <a href="cv.pdf" class="btn btn-ghost" download>Télécharger le CV ↓</a>
+        </div>
+      </div>
+
+      <div class="hero-diagram reveal" aria-hidden="true">
+        <svg viewBox="0 0 420 360" class="net-svg">
+          <!-- liaisons -->
+          <g class="net-links" stroke="var(--line)" stroke-width="1.5" fill="none">
+            <path id="path-cloud-fw" d="M210 40 L210 100" />
+            <path d="M210 100 L210 150" />
+            <path d="M210 150 L90 220" />
+            <path d="M210 150 L210 220" />
+            <path d="M210 150 L330 220" />
+            <path d="M90 220 L90 300" />
+            <path d="M210 220 L210 300" />
+            <path d="M330 220 L330 300" />
+          </g>
+
+          <!-- paquet animé -->
+          <circle r="4" fill="var(--accent)">
+            <animateMotion dur="3.2s" repeatCount="indefinite" path="M210 40 L210 100 L210 150 L90 220 L90 300" />
+          </circle>
+          <circle r="4" fill="var(--accent)" opacity="0.55">
+            <animateMotion dur="3.2s" begin="1.1s" repeatCount="indefinite" path="M210 40 L210 100 L210 150 L330 220 L330 300" />
+          </circle>
+
+          <!-- cloud / internet -->
+          <g transform="translate(210,26)">
+            <circle r="16" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.5"/>
+            <text y="4" text-anchor="middle" class="node-label-small">WAN</text>
+          </g>
+
+          <!-- firewall -->
+          <g transform="translate(210,125)">
+            <rect x="-22" y="-16" width="44" height="32" rx="4" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.5"/>
+            <text y="4" text-anchor="middle" class="node-label-small">FW</text>
+          </g>
+
+          <!-- switch -->
+          <g transform="translate(210,178)">
+            <rect x="-26" y="-14" width="52" height="28" rx="4" fill="var(--ink)"/>
+            <text y="4" text-anchor="middle" class="node-label-small node-label-invert">SW</text>
+          </g>
+
+          <!-- nodes -->
+          <g transform="translate(90,220)">
+            <circle r="18" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text y="4" text-anchor="middle" class="node-label-small">SRV</text>
+          </g>
+          <g transform="translate(210,220)">
+            <circle r="18" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text y="4" text-anchor="middle" class="node-label-small">SRV</text>
+          </g>
+          <g transform="translate(330,220)">
+            <circle r="18" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text y="4" text-anchor="middle" class="node-label-small">SRV</text>
+          </g>
+
+          <!-- postes clients -->
+          <g transform="translate(90,300)">
+            <rect x="-16" y="-12" width="32" height="24" rx="3" fill="var(--surface)" stroke="var(--ink-soft)" stroke-width="1.2"/>
+          </g>
+          <g transform="translate(210,300)">
+            <rect x="-16" y="-12" width="32" height="24" rx="3" fill="var(--surface)" stroke="var(--ink-soft)" stroke-width="1.2"/>
+          </g>
+          <g transform="translate(330,300)">
+            <rect x="-16" y="-12" width="32" height="24" rx="3" fill="var(--surface)" stroke="var(--ink-soft)" stroke-width="1.2"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ À PROPOS ============ -->
+  <section id="apropos" class="section">
+    <div class="wrap section-grid reveal">
+      <div class="section-label">
+        <p class="eyebrow">01 · profil</p>
+      </div>
+      <div class="section-body">
+        <p class="lead">Administrateur Systèmes et Réseaux avec <strong>[X années]</strong> d'expérience dans la gestion d'infrastructures on-premise et hybrides. J'interviens sur tout le cycle de vie : conception, déploiement, durcissement, supervision et astreinte.</p>
+        <p>Mon approche : documenter ce qui est fait, automatiser ce qui peut l'être, et surveiller ce qui ne doit jamais tomber. À l'aise aussi bien en salle serveur qu'en ligne de commande, je fais le lien entre les besoins métier et une infrastructure qui tient la charge.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPÉTENCES ============ -->
+  <section id="competences" class="section section-alt">
+    <div class="wrap reveal">
+      <p class="eyebrow">02 · compétences</p>
+      <h2 class="section-title">Ce sur quoi je m'appuie</h2>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Systèmes</h3>
+          <div class="tags">
+            <span>Linux (Debian/RHEL)</span><span>Windows Server</span><span>Active Directory</span><span>Shell / Bash</span><span>PowerShell</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Réseaux</h3>
+          <div class="tags">
+            <span>TCP/IP</span><span>VLAN</span><span>Routage &amp; switching</span><span>VPN site-à-site</span><span>Cisco / Fortinet</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Sécurité</h3>
+          <div class="tags">
+            <span>Pare-feu</span><span>IDS / IPS</span><span>Durcissement (hardening)</span><span>Gestion des accès</span><span>Sauvegarde &amp; PRA</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Virtualisation &amp; Cloud</h3>
+          <div class="tags">
+            <span>VMware ESXi</span><span>Proxmox</span><span>Hyper-V</span><span>Azure / AWS (bases)</span><span>Docker</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Supervision</h3>
+          <div class="tags">
+            <span>Zabbix</span><span>Nagios</span><span>Grafana</span><span>PRTG</span><span>Journalisation centralisée</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Méthode</h3>
+          <div class="tags">
+            <span>ITIL (bases)</span><span>Documentation technique</span><span>Gestion d'incidents</span><span>Astreinte</span><span>Automatisation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPÉRIENCE ============ -->
+  <section id="experience" class="section">
+    <div class="wrap reveal">
+      <p class="eyebrow">03 · parcours</p>
+      <h2 class="section-title">Expérience</h2>
+
+      <ol class="timeline">
+        <li class="timeline-item">
+          <div class="timeline-date">2023 — Aujourd'hui</div>
+          <div class="timeline-content">
+            <h3>Administrateur Systèmes &amp; Réseaux</h3>
+            <p class="timeline-org">[Nom de l'entreprise] · [Ville]</p>
+            <ul>
+              <li>Administration d'un parc de <strong>[X] serveurs</strong> (Linux/Windows) et supervision de la disponibilité via Zabbix.</li>
+              <li>Migration de l'infrastructure physique vers un cluster <strong>Proxmox</strong> haute disponibilité.</li>
+              <li>Mise en place d'un VPN site-à-site entre <strong>[X] sites</strong> et segmentation VLAN du réseau interne.</li>
+              <li>Réduction du temps moyen de résolution d'incident de <strong>[X %]</strong> grâce à l'automatisation des tâches récurrentes.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <div class="timeline-date">2021 — 2023</div>
+          <div class="timeline-content">
+            <h3>Technicien Systèmes &amp; Réseaux</h3>
+            <p class="timeline-org">[Nom de l'entreprise] · [Ville]</p>
+            <ul>
+              <li>Support niveau 2/3 sur incidents systèmes, réseaux et postes de travail.</li>
+              <li>Déploiement et durcissement de serveurs Windows Server / Active Directory.</li>
+              <li>Rédaction de la documentation technique et des procédures d'exploitation.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <div class="timeline-date">2019 — 2021</div>
+          <div class="timeline-content">
+            <h3>Technicien Support Informatique</h3>
+            <p class="timeline-org">[Nom de l'entreprise] · [Ville]</p>
+            <ul>
+              <li>Gestion du parc informatique et support utilisateurs de premier niveau.</li>
+              <li>Installation et configuration de matériel réseau (switches, points d'accès).</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ PROJETS ============ -->
+  <section id="projets" class="section section-alt">
+    <div class="wrap reveal">
+      <p class="eyebrow">04 · réalisations</p>
+      <h2 class="section-title">Projets marquants</h2>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-tag-row">
+            <span class="project-kind">Infrastructure</span>
+          </div>
+          <h3>Migration vers un cluster Proxmox HA</h3>
+          <p>Refonte complète de l'hyperviseur : passage d'une infrastructure physique vieillissante à un cluster virtualisé haute disponibilité, avec bascule automatique en cas de panne d'un nœud.</p>
+          <div class="tags tags-small">
+            <span>Proxmox</span><span>Ceph</span><span>Linux</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-tag-row">
+            <span class="project-kind">Supervision</span>
+          </div>
+          <h3>Stack de supervision Zabbix + Grafana</h3>
+          <p>Déploiement d'une chaîne de supervision centralisée avec tableaux de bord temps réel et alerting par email/SMS, réduisant le délai de détection d'incident de plusieurs heures à quelques minutes.</p>
+          <div class="tags tags-small">
+            <span>Zabbix</span><span>Grafana</span><span>Alerting</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-tag-row">
+            <span class="project-kind">Sécurité réseau</span>
+          </div>
+          <h3>Sécurisation du périmètre réseau</h3>
+          <p>Segmentation VLAN, mise en place d'un pare-feu nouvelle génération et de VPN site-à-site chiffrés entre plusieurs sites, avec politique d'accès basée sur le principe du moindre privilège.</p>
+          <div class="tags tags-small">
+            <span>Fortinet</span><span>VLAN</span><span>VPN IPsec</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section contact-section">
+    <div class="wrap reveal">
+      <p class="eyebrow">05 · contact</p>
+      <h2 class="section-title">Discutons de votre infrastructure</h2>
+      <p class="lead contact-lead">Disponible pour une mission, un poste ou simplement un échange technique — n'hésitez pas à me contacter.</p>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <div class="contact-value-row">
+            <a href="mailto:contact@alexmartin.dev" id="emailLink">contact@alexmartin.dev</a>
+            <button class="copy-btn" id="copyEmailBtn" type="button">Copier</button>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Téléphone</span>
+          <a href="tel:+33600000000">[+33 6 00 00 00 00]</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">LinkedIn</span>
+          <a href="https://linkedin.com/in/[votre-profil]" target="_blank" rel="noopener">linkedin.com/in/[votre-profil]</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">GitHub</span>
+          <a href="https://github.com/[votre-profil]" target="_blank" rel="noopener">github.com/[votre-profil]</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year"></span> FEISTHAUER Tristan — Administrateur Systèmes &amp; Réseaux</p>
+    <p class="footer-meta">build stable · v1.0.0</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
