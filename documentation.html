@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documentation technique — Infrastructure de supervision · Tristan Feisthauer</title>
+<meta name="description" content="Documentation technique du projet d'infrastructure de supervision — GHT de Moselle-Est.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="doc-page">
+
+<!-- ============ HEADER (documentation) ============ -->
+<header class="site-header doc-header-bar">
+  <div class="wrap header-inner">
+    <a href="index.html#top" class="logo">FT<span class="logo-dot">.</span></a>
+
+    <div class="doc-header-title">
+      <span class="eyebrow doc-eyebrow">projet · supervision</span>
+      <span class="doc-title-text">Documentation technique</span>
+    </div>
+
+    <a href="index.html#projets" class="btn btn-ghost btn-small">← Retour au portfolio</a>
+  </div>
+</header>
+
+<main class="doc-main">
+  <div class="wrap doc-toolbar">
+    <div>
+      <h1 class="doc-h1">Infrastructure de supervision — GHT Moselle-Est</h1>
+      <p class="doc-sub">Document technique détaillant la conception et la mise en œuvre du projet de supervision (Zabbix, Windows Server).</p>
+    </div>
+    <a href="documentation-supervision.pdf" class="btn btn-primary btn-small" download>Télécharger le PDF ↓</a>
+  </div>
+
+  <div class="doc-viewer wrap">
+    <iframe
+      id="docFrame"
+      class="doc-embed"
+      src="documentation-supervision.pdf"
+      title="Documentation technique du projet de supervision"
+      loading="lazy">
+    </iframe>
+
+    <div class="doc-fallback" id="docFallback">
+      <p>Le document n'est pas encore disponible ici.</p>
+      <p class="doc-fallback-hint">Ajoute un fichier nommé <code>documentation-supervision.pdf</code> à la racine du site pour qu'il s'affiche automatiquement sur cette page.</p>
+    </div>
+  </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year"></span> FEISTHAUER Tristan — Administrateur Systèmes &amp; Réseaux</p>
+    <p class="footer-meta">build stable · v1.1.0</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Affiche un message de secours si le PDF n'est pas encore présent sur le site.
+  (function checkPdf() {
+    var frame = document.getElementById('docFrame');
+    var fallback = document.getElementById('docFallback');
+    fetch(frame.getAttribute('src'), { method: 'HEAD' })
+      .then(function (res) {
+        if (!res.ok) {
+          frame.style.display = 'none';
+          fallback.style.display = 'flex';
+        }
+      })
+      .catch(function () {
+        frame.style.display = 'none';
+        fallback.style.display = 'flex';
+      });
+  })();
+</script>
+</body>
+</html>
