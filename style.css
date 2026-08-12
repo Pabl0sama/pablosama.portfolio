@@ -480,11 +480,17 @@ h1, h2, h3 {
 
 .btn-small { padding: 9px 16px; font-size: 13px; flex-shrink: 0; }
 
+.doc-wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 .doc-main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 32px 0 40px;
+  padding: 22px 0 24px;
 }
 
 .doc-toolbar {
@@ -492,7 +498,7 @@ h1, h2, h3 {
   align-items: flex-end;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   flex-wrap: wrap;
 }
 .doc-h1 {
@@ -509,7 +515,8 @@ h1, h2, h3 {
 .doc-viewer {
   position: relative;
   flex: 1;
-  min-height: 70vh;
+  height: calc(100vh - 220px);
+  min-height: 640px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
@@ -519,7 +526,6 @@ h1, h2, h3 {
 .doc-embed {
   width: 100%;
   height: 100%;
-  min-height: 70vh;
   border: none;
   display: block;
 }
@@ -551,7 +557,7 @@ h1, h2, h3 {
 
 @media (max-width: 720px) {
   .doc-header-title { display: none; }
-  .doc-viewer, .doc-embed { min-height: 60vh; }
+  .doc-viewer { height: calc(100vh - 180px); min-height: 500px; }
 }
 
 /* ============================================
