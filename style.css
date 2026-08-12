@@ -491,7 +491,7 @@ h1, h2, h3 {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 22px 0 24px;
+  padding: 16px 0 16px;
 }
 
 .doc-toolbar {
@@ -517,8 +517,8 @@ h1, h2, h3 {
   position: relative;
   width: 100%;
   flex: 1;
-  height: calc(100vh - 220px);
-  min-height: 640px;
+  height: calc(100vh - 130px);
+  min-height: 900px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
@@ -559,7 +559,7 @@ h1, h2, h3 {
 
 @media (max-width: 720px) {
   .doc-header-title { display: none; }
-  .doc-viewer { height: calc(100vh - 180px); min-height: 500px; }
+  .doc-viewer { height: calc(100vh - 110px); min-height: 750px; }
 }
 
 /* ============================================
