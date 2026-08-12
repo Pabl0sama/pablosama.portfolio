@@ -481,7 +481,7 @@ h1, h2, h3 {
 .btn-small { padding: 9px 16px; font-size: 13px; flex-shrink: 0; }
 
 .doc-wrap {
-  max-width: none;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 24px;
 }
