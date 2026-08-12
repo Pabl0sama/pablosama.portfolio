@@ -4,24 +4,6 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // ============================================
-// Compteur d'uptime (temps depuis le chargement de la page)
-// ============================================
-const uptimeEl = document.getElementById('uptime');
-const start = Date.now();
-
-function pad(n) { return String(n).padStart(2, '0'); }
-
-function updateUptime() {
-  const elapsed = Math.floor((Date.now() - start) / 1000);
-  const h = Math.floor(elapsed / 3600);
-  const m = Math.floor((elapsed % 3600) / 60);
-  const s = elapsed % 60;
-  uptimeEl.textContent = `${pad(h)}:${pad(m)}:${pad(s)}`;
-}
-updateUptime();
-setInterval(updateUptime, 1000);
-
-// ============================================
 // Menu mobile
 // ============================================
 const navToggle = document.getElementById('navToggle');

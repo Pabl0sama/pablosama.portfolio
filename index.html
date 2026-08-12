@@ -26,11 +26,6 @@
       <a href="#contact">Contact</a>
     </nav>
 
-    <div class="status-pill" title="Statut de session">
-      <span class="status-dot" aria-hidden="true"></span>
-      <span class="status-text">uptime <span id="uptime">00:00:00</span></span>
-    </div>
-
     <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -70,25 +65,25 @@
           <circle r="4" fill="var(--accent)">
             <animateMotion dur="3.2s" repeatCount="indefinite" path="M210 40 L210 100 L210 150 L90 220 L90 300" />
           </circle>
-          <circle r="4" fill="var(--accent)" opacity="0.55">
+          <circle r="4" fill="var(--accent2)" opacity="0.75">
             <animateMotion dur="3.2s" begin="1.1s" repeatCount="indefinite" path="M210 40 L210 100 L210 150 L330 220 L330 300" />
           </circle>
 
           <!-- cloud / internet -->
           <g transform="translate(210,26)">
-            <circle r="16" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.5"/>
+            <circle r="16" fill="var(--surface)" stroke="var(--accent2)" stroke-width="1.5"/>
             <text y="4" text-anchor="middle" class="node-label-small">WAN</text>
           </g>
 
           <!-- firewall -->
           <g transform="translate(210,125)">
-            <rect x="-22" y="-16" width="44" height="32" rx="4" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.5"/>
+            <rect x="-22" y="-16" width="44" height="32" rx="4" fill="var(--surface)" stroke="var(--accent2)" stroke-width="1.5"/>
             <text y="4" text-anchor="middle" class="node-label-small">FW</text>
           </g>
 
           <!-- switch -->
           <g transform="translate(210,178)">
-            <rect x="-26" y="-14" width="52" height="28" rx="4" fill="var(--ink)"/>
+            <rect x="-26" y="-14" width="52" height="28" rx="4" fill="var(--accent2)"/>
             <text y="4" text-anchor="middle" class="node-label-small node-label-invert">SW</text>
           </g>
 
