@@ -15,9 +15,9 @@
   --accent2-soft: #efe9ff;
   --ok: #3c8c5b;
 
-  --font-display: "Space Grotesk", sans-serif;
-  --font-body: "Inter", sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
+  --font-display: "Outfit", sans-serif;
+  --font-body: "Karla", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 
   --wrap: 1080px;
   --radius: 6px;
@@ -109,17 +109,6 @@ h1, h2, h3 {
   gap: 24px;
 }
 
-.logo {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 20px;
-  color: var(--ink);
-  text-decoration: none;
-  flex-shrink: 0;
-}
-.logo:hover { text-decoration: none; }
-.logo-dot { color: var(--accent2); }
-
 .nav {
   display: flex;
   gap: 28px;
@@ -144,6 +133,7 @@ h1, h2, h3 {
   border: none;
   cursor: pointer;
   flex-shrink: 0;
+  margin-left: auto;
 }
 .nav-toggle span {
   display: block;
