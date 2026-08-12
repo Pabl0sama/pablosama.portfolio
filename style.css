@@ -518,7 +518,7 @@ h1, h2, h3 {
   width: 100%;
   flex: 1;
   height: calc(100vh - 130px);
-  min-height: 900px;
+  min-height: 1200px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
