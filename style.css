@@ -454,8 +454,12 @@ h1, h2, h3 {
 .doc-page {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }
+.doc-page .site-header { flex-shrink: 0; }
+.doc-page .site-footer { flex-shrink: 0; padding: 10px 0; }
+.doc-page .footer-inner { font-size: 11.5px; }
 
 .doc-header-bar .header-inner { gap: 18px; }
 
@@ -489,17 +493,19 @@ h1, h2, h3 {
 
 .doc-main {
   flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
-  padding: 16px 0 16px;
+  padding: 10px 0 10px;
 }
 
 .doc-toolbar {
+  flex-shrink: 0;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   flex-wrap: wrap;
 }
 .doc-h1 {
@@ -517,8 +523,7 @@ h1, h2, h3 {
   position: relative;
   width: 100%;
   flex: 1;
-  height: calc(100vh - 130px);
-  min-height: 1200px;
+  min-height: 0;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
@@ -559,7 +564,6 @@ h1, h2, h3 {
 
 @media (max-width: 720px) {
   .doc-header-title { display: none; }
-  .doc-viewer { height: calc(100vh - 110px); min-height: 750px; }
 }
 
 /* ============================================
