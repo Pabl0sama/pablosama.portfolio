@@ -260,6 +260,24 @@ h1, h2, h3 {
 .section-body p { margin: 0 0 18px; }
 .section-body p:last-child { margin-bottom: 0; }
 
+.profile-extra {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.profile-extra-item p {
+  margin: 6px 0 0;
+  font-size: 14.5px;
+  color: var(--ink);
+}
+
+@media (max-width: 640px) {
+  .profile-extra { grid-template-columns: 1fr; }
+}
+
 /* ============================================
    SKILLS
    ============================================ */
