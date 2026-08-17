@@ -9,12 +9,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Karla:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  .tf-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;margin-right:auto;}
+  .tf-logo-mark{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:10px;background:var(--accent, #2f6fed);color:var(--surface, #fff);font-family:'Outfit',sans-serif;font-weight:700;font-size:.95rem;letter-spacing:.02em;flex-shrink:0;}
+  .tf-logo-text{font-family:'Outfit',sans-serif;font-weight:600;font-size:.95rem;line-height:1.1;color:var(--ink, #16181d);white-space:nowrap;}
+  .tf-logo-text span{display:block;font-family:'Karla',sans-serif;font-weight:400;font-size:.72rem;color:var(--ink-soft, #6b7280);}
+  .doc-header-bar .header-inner{gap:1rem;}
+</style>
 </head>
 <body class="doc-page">
 
 <!-- ============ HEADER (documentation) ============ -->
 <header class="site-header doc-header-bar">
   <div class="wrap header-inner">
+    <a href="index.html#top" class="tf-logo" aria-label="Retour à l'accueil du portfolio">
+      <span class="tf-logo-mark">TF</span>
+      <span class="tf-logo-text">Tristan Feisthauer<span>Portfolio</span></span>
+    </a>
+
     <div class="doc-header-title">
       <span class="eyebrow doc-eyebrow">projet · supervision</span>
       <span class="doc-title-text">Documentation technique</span>
